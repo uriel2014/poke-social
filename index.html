@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Social Page</title>
+    <!--Icon for the tab -->
+    <link rel="icon" href="./resources/rowlett-tea.jpg" type="image/x-icon">
+    <!--Stylesheets needed for to be referenced and linked -->
+    <link rel="stylesheet" href="./resources/reset.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resources/styles.css" type="text/css">
+  </head>
+  <body>
+
+    <!--NAVIGATION BAR SECTION -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- This #myNavbar id attribute will be reference with the collapse elements to be collapsed once
+          screen size changes-->
+          <a class="navbar-brand" href="#">Logo</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <!--Here is where the id attribute is going to be referenced when screen size changes to small screen-->
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Messages</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-right" role="search">
+            <!--navbar-form is used to represent a form element in the navbar-->
+            <div class="form-group input-group">
+              <!--form-group is referenced to wrap all form controls, and input
+              group is to be used to enhance an input by adding an icon, text, or button
+              in front or behind it as a help-->
+              <input type="text" class="form-control" placeholder="Search..">
+              <span class="input-group-btn">
+                <!--together with the input-group the input-group-btn attaches
+                a button next to an input. Often used with a Search bar.-->
+                <button class="btn btn-default" type="button">
+                  <!--Creates a basic button and the defualt button gives it the
+                  default styling-->
+                  <span class="glyphicon glyphicon-search"></span>
+                  <!--icon to be used for the search button-->
+                </button>
+              </span>
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <!-- This will be moved to the right but will be before the form elements.
+            this is due to form being reference first and taking the most right-->
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Account</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--CONTAINER SECTION -->
+
+    <div class="container text-center">
+      <!-- make all text aligned to the center with the class text-center-->
+      <div class="row">
+        <!-- Treat the whole container as a row, 12 column span-->
+
+        <div class="col-sm-3 well">
+          <!--This well class will add a rounded border around the element with a
+          gray background and some padding-->
+
+          <div class="well">
+            <p><a href="#">My Profile</a></p>
+            <img src="./resources/rowlett-tea.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          </div>
+
+          <div class="well">
+            <p><a href="#">Interests</a></p>
+            <p>
+              <span class="label label-default">News</span>
+              <span class="label label-primary">Pokemon</span>
+              <span class="label label-success">Napping</span>
+              <span class="label label-info">Coding</span>
+              <span class="label label-warning">Gaming</span>
+              <span class="label label-danger">Friends</span>
+              <!-- This holds the label class along with the class that references the contextual colors -->
+            </p>
+          </div>
+
+          <div class="alert alert-success fade in">
+            <!-- This will give the alert class and give it the contextual color accorsing to success,
+            also we add the class of fade and in to add the fading effect when closing the alert message -->
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <!-- Next we add the .close class to the link and data-dismiss to alert to give the
+            approval for an x to be present at the corner of the alert box.
+          The aria-label property is for screen readers to indicate the closing. -->
+            <p><strong>Ey!</strong></p>
+            Pokemon and people are looking at your profile. Find out who.
+          </div>
+
+          <p class="one"><a href="https://bulbapedia.bulbagarden.net/wiki/Nature" target="_blank">Pokemon Natures</a></p>
+          <p class="two"><a href="https://bulbapedia.bulbagarden.net/wiki/Type" target="_blank">List of Types</a></p>
+          <p class="three"><a href="https://bulbapedia.bulbagarden.net/wiki/Villainous_teams" target="_blank">Evil Organizations</a></p>
+
+        </div>
+        <!-- This 3 column span is the first section of the row. -->
+        <div class="col-sm-7">
+
+          <!-- We will make this space of 7 column have 5 seperate rows which will
+          be divided into 12 columns. These will show comments from others and a feeling box -->
+
+            <div class="row">
+              <!-- First part of ths column, is the like box -->
+              <div class="col-sm-12">
+                <!-- THis section will occupy 12 columns-->
+                <div class="panel panel-default text-left">
+                  <!-- Here we create the panel or bordered box with padding around its content.
+                  Panel-default is used to give the default styling. Text-left is used to move
+                  the text to the left. -->
+                  <div class="panel-body">
+                    <!--Panel-body class is the content of the panel that will exhibit the styling of
+                    panel-default-->
+                    <p contenteditable="true">Status: Feeling Awesome</p>
+                    <!-- THis contenteditable is applied to true to give this paragraph the
+                    ability to be edited by user.Meaning the user can type freely in this paragraph space -->
+                    <button type="button" class="btn btn-default btn-sm">
+                      <!-- Here we have the btn and btn-default along withthe size of he button classes to be used-->
+                      <span class="glyphicon glyphicon-thumbs-up"></span> Like
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!--Split this row into a picture (3 col space) and a comment box (9col space)-->
+              <div class="col-sm-3">
+                <div class="well">
+                  <p>Oshawott</p>
+                  <img src="./resources/oshawott.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                  <!-- img-circle class give the image a circular shape -->
+                </div>
+              </div>
+              <!--Comment Box-->
+              <div class="col-sm-9">
+                <div class="well">
+                  <p>Just Forgot that I had to mention something about my water ability torrent.
+                    Yesterday, I came across an intense battle and i was at the point of collapse
+                    until i realized my water moves increased in power. This was the first
+                    time i witness torrent into play. Im excited.</p>
+                </div>
+              </div>
+              <!--End of 1st comment box row -->
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="well">
+                  <p>Tepig</p>
+                  <img src="./resources/tepig.png" class="img-circle" height="55" width="55" alt="Avatar">
+                </div>
+              </div>
+              <!--Comment Box-->
+              <div class="col-sm-9">
+                <div class="well">
+                  <p>Yes, Oshawott, i too have witness this power, but mine is with the fire power.
+                  My ability is Blaze and i first witnessed it around three months ago when I faced
+                  a very strong Pidove. I was shoced how much my fire power increased by.</p>
+                </div>
+              </div>
+              <!-- End of second comment box row-->
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="well">
+                  <p>Snivy</p>
+                  <img src="./resources/snivy.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                </div>
+              </div>
+              <!--Comment Box -->
+              <div class="col-sm-9">
+                <div class="well">
+                  <p>I have not yet witness my true power. My ability is called Overgrow,
+                  at least that is what Serperior told me. Will one of you or both of you
+                  battle with me, so I can bring out my true power? I will buy you guys Poke Puffs
+                  after the battle.</p>
+                </div>
+              </div>
+              <!--End of the third comment box row-->
+            </div>
+
+
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="well">
+                  <p>Rowlett</p>
+                  <img src="./resources/rowlett-tea.jpg" class="img-circle" height="55" width="55" alt="Avatar">
+                </div>
+              </div>
+              <!--Comment box-->
+              <div class="col-sm-9">
+                <div class="well">
+                  <p>Yes Snivy, I will gladly do battle with you, but I am requesting
+                  four pokepuffs and some malasadas. Battle take up alot of energy.</p>
+                </div>
+              </div>
+              <!--End of the 4th comment box row-->
+            </div>
+      <!-- End of the second main column space of the webpage -->
+        </div>
+
+
+      <!-- Last section of the main row, which will occupy only 2 column spaces -->
+        <div class="col-sm-2 well">
+
+          <div class="thumbnail">
+            <!-- adds a border around the element (often images or videos) to make
+            it look like a thumbnail-->
+            <p>Upcoming Events:</p>
+            <img src="./resources/kanto-map.png" alt="Paris" width="400" height="300">
+            <p><strong>Travel to Kanto</strong></p>
+            <p>Fri. 27 November 2015</p>
+            <button class="btn btn-primary">Info</button>
+            <!--button gets the class of btn to activate a btn and btn-primary to
+            get its contextual color-->
+          </div>
+
+          <div class="well">
+            <p>ADS</p>
+          </div>
+
+          <div class="well">
+              <p>ADS</p>
+          </div>
+
+          <div class="well">
+              <p>ADS</p>
+          </div>
+
+        </div>
+        <!-- Last two columns of the row-->
+
+      </div> <!-- End of the Main Row-->
+    </div>
+
+
+    <!--FOOTER SECTION -->
+
+    <footer class="container-fluid text-center">
+      <p>&copy; Pokemon Social Media Page of Tweets</p>
+    </footer>
+
+
+
+
+    <!--Scripts to use-->
+  <!--Main Jquery Script -->
+   <script src="https://code.jquery.com/jquery-3.3.1.js"
+       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+       crossorigin="anonymous"></script>
+       <!-- Bootstrap scripts for jquery and Javascript -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

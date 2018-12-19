@@ -1,0 +1,32 @@
+/* Additional styling needed */
+
+body{
+  background-color: black;
+}
+
+.one{
+  background-color: lightseagreen;
+  color: black;
+}
+
+.two{
+  background-color:pink;
+  color:black;
+}
+
+.three{
+  background-color: skyblue;
+  color:black;
+}
+
+.one:hover, .two:hover, .three:hover{
+  background-color: black;
+  color:white;
+  text-decoration: none;
+}
+
+footer{
+      background-color: #555;
+      color: white;
+      padding: 15px;
+}
